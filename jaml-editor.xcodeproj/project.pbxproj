@@ -1,0 +1,461 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C75842CE1495E9790017161B /* JHJAMLHTMLDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C75842CB1495E9790017161B /* JHJAMLHTMLDelegate.m */; };
+		C75842CF1495E9790017161B /* JHJAMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C75842CD1495E9790017161B /* JHJAMLParser.m */; };
+		C75842D31497130C0017161B /* Clearness.css in Resources */ = {isa = PBXBuildFile; fileRef = C75842D11497130C0017161B /* Clearness.css */; };
+		C75842D41497130C0017161B /* GitHub.css in Resources */ = {isa = PBXBuildFile; fileRef = C75842D21497130C0017161B /* GitHub.css */; };
+		C75842E61497EE500017161B /* MASPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C75842E31497EE500017161B /* MASPreferencesWindow.xib */; };
+		C75842E71497EE500017161B /* MASPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C75842E51497EE500017161B /* MASPreferencesWindowController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C75842EA1497EE970017161B /* JHJAMLEditorAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C75842E91497EE970017161B /* JHJAMLEditorAppDelegate.m */; };
+		C75842EF149851500017161B /* CSSPreferenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C75842ED149851500017161B /* CSSPreferenceViewController.m */; };
+		C75842F0149851500017161B /* CSSPreferenceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C75842EE149851500017161B /* CSSPreferenceViewController.xib */; };
+		C7584308149860390017161B /* BWAnchoredButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C75842F7149860390017161B /* BWAnchoredButton.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C7584309149860390017161B /* BWAnchoredButtonBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C75842F9149860390017161B /* BWAnchoredButtonBar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C758430A149860390017161B /* BWAnchoredButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C75842FB149860390017161B /* BWAnchoredButtonCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C758430B149860390017161B /* BWSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = C75842FD149860390017161B /* BWSplitView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C758430C149860390017161B /* NSColor+BWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C75842FF149860390017161B /* NSColor+BWAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C758430D149860390017161B /* NSEvent+BWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7584301149860390017161B /* NSEvent+BWAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C758430E149860390017161B /* NSImage+BWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7584303149860390017161B /* NSImage+BWAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C758430F149860390017161B /* NSString+BWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7584305149860390017161B /* NSString+BWAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C7584310149860390017161B /* NSView+BWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7584307149860390017161B /* NSView+BWAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C7628EBF1494176100DD3C34 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7628EBE1494176100DD3C34 /* Cocoa.framework */; };
+		C7628EC91494176100DD3C34 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7628EC71494176100DD3C34 /* InfoPlist.strings */; };
+		C7628ECB1494176100DD3C34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7628ECA1494176100DD3C34 /* main.m */; };
+		C7628ECF1494176100DD3C34 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C7628ECD1494176100DD3C34 /* Credits.rtf */; };
+		C7628ED21494176100DD3C34 /* JHDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = C7628ED11494176100DD3C34 /* JHDocument.m */; };
+		C7628ED51494176100DD3C34 /* JHDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7628ED31494176100DD3C34 /* JHDocument.xib */; };
+		C7628ED81494176200DD3C34 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7628ED61494176200DD3C34 /* MainMenu.xib */; };
+		C7E61EBE1495D636007AD899 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E61EBD1495D636007AD899 /* WebKit.framework */; };
+		C7E61EC11495E48E007AD899 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E61EC01495E48E007AD899 /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C75842CA1495E9790017161B /* JHJAMLHTMLDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JHJAMLHTMLDelegate.h; path = "../../jaml-parser/jaml-parser/JHJAMLHTMLDelegate.h"; sourceTree = "<group>"; };
+		C75842CB1495E9790017161B /* JHJAMLHTMLDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JHJAMLHTMLDelegate.m; path = "../../jaml-parser/jaml-parser/JHJAMLHTMLDelegate.m"; sourceTree = "<group>"; };
+		C75842CC1495E9790017161B /* JHJAMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JHJAMLParser.h; path = "../../jaml-parser/jaml-parser/JHJAMLParser.h"; sourceTree = "<group>"; };
+		C75842CD1495E9790017161B /* JHJAMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JHJAMLParser.m; path = "../../jaml-parser/jaml-parser/JHJAMLParser.m"; sourceTree = "<group>"; };
+		C75842D11497130C0017161B /* Clearness.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = Clearness.css; sourceTree = "<group>"; };
+		C75842D21497130C0017161B /* GitHub.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = GitHub.css; sourceTree = "<group>"; };
+		C75842E21497EE500017161B /* MASPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferencesViewController.h; sourceTree = "<group>"; };
+		C75842E31497EE500017161B /* MASPreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MASPreferencesWindow.xib; sourceTree = "<group>"; };
+		C75842E41497EE500017161B /* MASPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferencesWindowController.h; sourceTree = "<group>"; };
+		C75842E51497EE500017161B /* MASPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASPreferencesWindowController.m; sourceTree = "<group>"; };
+		C75842E81497EE970017161B /* JHJAMLEditorAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHJAMLEditorAppDelegate.h; sourceTree = "<group>"; };
+		C75842E91497EE970017161B /* JHJAMLEditorAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHJAMLEditorAppDelegate.m; sourceTree = "<group>"; };
+		C75842EC149851500017161B /* CSSPreferenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSPreferenceViewController.h; sourceTree = "<group>"; };
+		C75842ED149851500017161B /* CSSPreferenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSPreferenceViewController.m; sourceTree = "<group>"; };
+		C75842EE149851500017161B /* CSSPreferenceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSSPreferenceViewController.xib; sourceTree = "<group>"; };
+		C75842F6149860390017161B /* BWAnchoredButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWAnchoredButton.h; sourceTree = "<group>"; };
+		C75842F7149860390017161B /* BWAnchoredButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWAnchoredButton.m; sourceTree = "<group>"; };
+		C75842F8149860390017161B /* BWAnchoredButtonBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWAnchoredButtonBar.h; sourceTree = "<group>"; };
+		C75842F9149860390017161B /* BWAnchoredButtonBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWAnchoredButtonBar.m; sourceTree = "<group>"; };
+		C75842FA149860390017161B /* BWAnchoredButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWAnchoredButtonCell.h; sourceTree = "<group>"; };
+		C75842FB149860390017161B /* BWAnchoredButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWAnchoredButtonCell.m; sourceTree = "<group>"; };
+		C75842FC149860390017161B /* BWSplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWSplitView.h; sourceTree = "<group>"; };
+		C75842FD149860390017161B /* BWSplitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWSplitView.m; sourceTree = "<group>"; };
+		C75842FE149860390017161B /* NSColor+BWAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+BWAdditions.h"; sourceTree = "<group>"; };
+		C75842FF149860390017161B /* NSColor+BWAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+BWAdditions.m"; sourceTree = "<group>"; };
+		C7584300149860390017161B /* NSEvent+BWAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSEvent+BWAdditions.h"; sourceTree = "<group>"; };
+		C7584301149860390017161B /* NSEvent+BWAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSEvent+BWAdditions.m"; sourceTree = "<group>"; };
+		C7584302149860390017161B /* NSImage+BWAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+BWAdditions.h"; sourceTree = "<group>"; };
+		C7584303149860390017161B /* NSImage+BWAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+BWAdditions.m"; sourceTree = "<group>"; };
+		C7584304149860390017161B /* NSString+BWAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BWAdditions.h"; sourceTree = "<group>"; };
+		C7584305149860390017161B /* NSString+BWAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BWAdditions.m"; sourceTree = "<group>"; };
+		C7584306149860390017161B /* NSView+BWAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+BWAdditions.h"; sourceTree = "<group>"; };
+		C7584307149860390017161B /* NSView+BWAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+BWAdditions.m"; sourceTree = "<group>"; };
+		C7628EBA1494176100DD3C34 /* jaml-editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "jaml-editor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7628EBE1494176100DD3C34 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		C7628EC11494176100DD3C34 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		C7628EC21494176100DD3C34 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C7628EC31494176100DD3C34 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C7628EC61494176100DD3C34 /* jaml-editor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "jaml-editor-Info.plist"; sourceTree = "<group>"; };
+		C7628EC81494176100DD3C34 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C7628ECA1494176100DD3C34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C7628ECC1494176100DD3C34 /* jaml-editor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "jaml-editor-Prefix.pch"; sourceTree = "<group>"; };
+		C7628ECE1494176100DD3C34 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		C7628ED01494176100DD3C34 /* JHDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHDocument.h; sourceTree = "<group>"; };
+		C7628ED11494176100DD3C34 /* JHDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHDocument.m; sourceTree = "<group>"; };
+		C7628ED41494176100DD3C34 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/JHDocument.xib; sourceTree = "<group>"; };
+		C7628ED71494176200DD3C34 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C7E61EBD1495D636007AD899 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		C7E61EC01495E48E007AD899 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C7628EB71494176100DD3C34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7E61EC11495E48E007AD899 /* QuartzCore.framework in Frameworks */,
+				C7E61EBE1495D636007AD899 /* WebKit.framework in Frameworks */,
+				C7628EBF1494176100DD3C34 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C75842D01497130C0017161B /* css */ = {
+			isa = PBXGroup;
+			children = (
+				C75842D11497130C0017161B /* Clearness.css */,
+				C75842D21497130C0017161B /* GitHub.css */,
+			);
+			path = css;
+			sourceTree = "<group>";
+		};
+		C75842E11497EE4F0017161B /* MASPreferences */ = {
+			isa = PBXGroup;
+			children = (
+				C75842E21497EE500017161B /* MASPreferencesViewController.h */,
+				C75842E31497EE500017161B /* MASPreferencesWindow.xib */,
+				C75842E41497EE500017161B /* MASPreferencesWindowController.h */,
+				C75842E51497EE500017161B /* MASPreferencesWindowController.m */,
+			);
+			path = MASPreferences;
+			sourceTree = "<group>";
+		};
+		C75842EB14984F790017161B /* PreferencePane */ = {
+			isa = PBXGroup;
+			children = (
+				C75842EC149851500017161B /* CSSPreferenceViewController.h */,
+				C75842ED149851500017161B /* CSSPreferenceViewController.m */,
+				C75842EE149851500017161B /* CSSPreferenceViewController.xib */,
+			);
+			path = PreferencePane;
+			sourceTree = "<group>";
+		};
+		C75842F5149860390017161B /* BWToolkit */ = {
+			isa = PBXGroup;
+			children = (
+				C75842F6149860390017161B /* BWAnchoredButton.h */,
+				C75842F7149860390017161B /* BWAnchoredButton.m */,
+				C75842F8149860390017161B /* BWAnchoredButtonBar.h */,
+				C75842F9149860390017161B /* BWAnchoredButtonBar.m */,
+				C75842FA149860390017161B /* BWAnchoredButtonCell.h */,
+				C75842FB149860390017161B /* BWAnchoredButtonCell.m */,
+				C75842FC149860390017161B /* BWSplitView.h */,
+				C75842FD149860390017161B /* BWSplitView.m */,
+				C75842FE149860390017161B /* NSColor+BWAdditions.h */,
+				C75842FF149860390017161B /* NSColor+BWAdditions.m */,
+				C7584300149860390017161B /* NSEvent+BWAdditions.h */,
+				C7584301149860390017161B /* NSEvent+BWAdditions.m */,
+				C7584302149860390017161B /* NSImage+BWAdditions.h */,
+				C7584303149860390017161B /* NSImage+BWAdditions.m */,
+				C7584304149860390017161B /* NSString+BWAdditions.h */,
+				C7584305149860390017161B /* NSString+BWAdditions.m */,
+				C7584306149860390017161B /* NSView+BWAdditions.h */,
+				C7584307149860390017161B /* NSView+BWAdditions.m */,
+			);
+			path = BWToolkit;
+			sourceTree = "<group>";
+		};
+		C7628EAF1494176100DD3C34 = {
+			isa = PBXGroup;
+			children = (
+				C7628EC41494176100DD3C34 /* jaml-editor */,
+				C7628EBD1494176100DD3C34 /* Frameworks */,
+				C7628EBB1494176100DD3C34 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C7628EBB1494176100DD3C34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7628EBA1494176100DD3C34 /* jaml-editor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7628EBD1494176100DD3C34 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C7E61EC01495E48E007AD899 /* QuartzCore.framework */,
+				C7E61EBD1495D636007AD899 /* WebKit.framework */,
+				C7628EBE1494176100DD3C34 /* Cocoa.framework */,
+				C7628EC01494176100DD3C34 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7628EC01494176100DD3C34 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C7628EC11494176100DD3C34 /* AppKit.framework */,
+				C7628EC21494176100DD3C34 /* CoreData.framework */,
+				C7628EC31494176100DD3C34 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		C7628EC41494176100DD3C34 /* jaml-editor */ = {
+			isa = PBXGroup;
+			children = (
+				C75842CA1495E9790017161B /* JHJAMLHTMLDelegate.h */,
+				C75842CB1495E9790017161B /* JHJAMLHTMLDelegate.m */,
+				C75842CC1495E9790017161B /* JHJAMLParser.h */,
+				C75842CD1495E9790017161B /* JHJAMLParser.m */,
+				C7628ED01494176100DD3C34 /* JHDocument.h */,
+				C7628ED11494176100DD3C34 /* JHDocument.m */,
+				C75842E81497EE970017161B /* JHJAMLEditorAppDelegate.h */,
+				C75842E91497EE970017161B /* JHJAMLEditorAppDelegate.m */,
+				C7628ED31494176100DD3C34 /* JHDocument.xib */,
+				C7628ED61494176200DD3C34 /* MainMenu.xib */,
+				C75842EB14984F790017161B /* PreferencePane */,
+				C75842F5149860390017161B /* BWToolkit */,
+				C75842E11497EE4F0017161B /* MASPreferences */,
+				C75842D01497130C0017161B /* css */,
+				C7628EC51494176100DD3C34 /* Supporting Files */,
+			);
+			path = "jaml-editor";
+			sourceTree = "<group>";
+		};
+		C7628EC51494176100DD3C34 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C7628EC61494176100DD3C34 /* jaml-editor-Info.plist */,
+				C7628EC71494176100DD3C34 /* InfoPlist.strings */,
+				C7628ECA1494176100DD3C34 /* main.m */,
+				C7628ECC1494176100DD3C34 /* jaml-editor-Prefix.pch */,
+				C7628ECD1494176100DD3C34 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C7628EB91494176100DD3C34 /* jaml-editor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7628EDB1494176200DD3C34 /* Build configuration list for PBXNativeTarget "jaml-editor" */;
+			buildPhases = (
+				C7628EB61494176100DD3C34 /* Sources */,
+				C7628EB71494176100DD3C34 /* Frameworks */,
+				C7628EB81494176100DD3C34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "jaml-editor";
+			productName = "jaml-editor";
+			productReference = C7628EBA1494176100DD3C34 /* jaml-editor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C7628EB11494176100DD3C34 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = Student;
+			};
+			buildConfigurationList = C7628EB41494176100DD3C34 /* Build configuration list for PBXProject "jaml-editor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C7628EAF1494176100DD3C34;
+			productRefGroup = C7628EBB1494176100DD3C34 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C7628EB91494176100DD3C34 /* jaml-editor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C7628EB81494176100DD3C34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7628EC91494176100DD3C34 /* InfoPlist.strings in Resources */,
+				C7628ECF1494176100DD3C34 /* Credits.rtf in Resources */,
+				C7628ED51494176100DD3C34 /* JHDocument.xib in Resources */,
+				C7628ED81494176200DD3C34 /* MainMenu.xib in Resources */,
+				C75842D31497130C0017161B /* Clearness.css in Resources */,
+				C75842D41497130C0017161B /* GitHub.css in Resources */,
+				C75842E61497EE500017161B /* MASPreferencesWindow.xib in Resources */,
+				C75842F0149851500017161B /* CSSPreferenceViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C7628EB61494176100DD3C34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7628ECB1494176100DD3C34 /* main.m in Sources */,
+				C7628ED21494176100DD3C34 /* JHDocument.m in Sources */,
+				C75842CE1495E9790017161B /* JHJAMLHTMLDelegate.m in Sources */,
+				C75842CF1495E9790017161B /* JHJAMLParser.m in Sources */,
+				C75842E71497EE500017161B /* MASPreferencesWindowController.m in Sources */,
+				C75842EA1497EE970017161B /* JHJAMLEditorAppDelegate.m in Sources */,
+				C75842EF149851500017161B /* CSSPreferenceViewController.m in Sources */,
+				C7584308149860390017161B /* BWAnchoredButton.m in Sources */,
+				C7584309149860390017161B /* BWAnchoredButtonBar.m in Sources */,
+				C758430A149860390017161B /* BWAnchoredButtonCell.m in Sources */,
+				C758430B149860390017161B /* BWSplitView.m in Sources */,
+				C758430C149860390017161B /* NSColor+BWAdditions.m in Sources */,
+				C758430D149860390017161B /* NSEvent+BWAdditions.m in Sources */,
+				C758430E149860390017161B /* NSImage+BWAdditions.m in Sources */,
+				C758430F149860390017161B /* NSString+BWAdditions.m in Sources */,
+				C7584310149860390017161B /* NSView+BWAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C7628EC71494176100DD3C34 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7628EC81494176100DD3C34 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C7628ECD1494176100DD3C34 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7628ECE1494176100DD3C34 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		C7628ED31494176100DD3C34 /* JHDocument.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7628ED41494176100DD3C34 /* en */,
+			);
+			name = JHDocument.xib;
+			sourceTree = "<group>";
+		};
+		C7628ED61494176200DD3C34 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7628ED71494176200DD3C34 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C7628ED91494176200DD3C34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C7628EDA1494176200DD3C34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C7628EDC1494176200DD3C34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../../../Downloads/BWToolkit 2\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "jaml-editor/jaml-editor-Prefix.pch";
+				INFOPLIST_FILE = "jaml-editor/jaml-editor-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C7628EDD1494176200DD3C34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../../../Downloads/BWToolkit 2\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "jaml-editor/jaml-editor-Prefix.pch";
+				INFOPLIST_FILE = "jaml-editor/jaml-editor-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C7628EB41494176100DD3C34 /* Build configuration list for PBXProject "jaml-editor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7628ED91494176200DD3C34 /* Debug */,
+				C7628EDA1494176200DD3C34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7628EDB1494176200DD3C34 /* Build configuration list for PBXNativeTarget "jaml-editor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7628EDC1494176200DD3C34 /* Debug */,
+				C7628EDD1494176200DD3C34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C7628EB11494176100DD3C34 /* Project object */;
+}
