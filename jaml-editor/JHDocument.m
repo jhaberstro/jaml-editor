@@ -27,7 +27,6 @@
                                                       selector:@selector(updateWebview)
                                                       userInfo:nil
                                                        repeats:YES];
-        NSLog(@"fileType: %@", [self fileType]);
     }
     return self;
 }
@@ -102,14 +101,14 @@
     if (_dirty) {
         NSDate* now = [NSDate dateWithTimeIntervalSinceNow:0];
         NSTimeInterval change = [now timeIntervalSinceDate:_lastEdit];
-        if (change > 0.5) {
+        if (change > 0.04) {
             JHJAMLHTMLDelegate* delegate = [[JHJAMLHTMLDelegate alloc] init];
             _jamlParser.delegate = delegate;
             [_jamlParser parseJAML:self.editorView.string];
             NSArray* cssFiles = [[NSBundle mainBundle] URLsForResourcesWithExtension:@"css" subdirectory:@""];
             NSString* html = [NSString stringWithFormat:@"<head><link rel=\"stylesheet\" href=\"%@\"></head><body>%@</body>", [[cssFiles objectAtIndex:0] absoluteString], delegate.html];
-            printf("%s\n\n", [html UTF8String]);
             [[self.webView mainFrame] loadHTMLString:html baseURL:nil];
+            //printf("%s\n\n", [html UTF8String]);
             _dirty = NO;
         }
     }

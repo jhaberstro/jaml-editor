@@ -33,10 +33,6 @@
 
 - (void)viewWillAppear
 {
-    NSArray* cssFiles = [[NSBundle mainBundle] URLsForResourcesWithExtension:@"css" subdirectory:@""];
-    for (NSString* file in cssFiles) {
-        NSLog(@"%@", file);
-    }
 }
 
 @end
