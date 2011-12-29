@@ -33,6 +33,7 @@
 		C7628ED21494176100DD3C34 /* JHDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = C7628ED11494176100DD3C34 /* JHDocument.m */; };
 		C7628ED51494176100DD3C34 /* JHDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7628ED31494176100DD3C34 /* JHDocument.xib */; };
 		C7628ED81494176200DD3C34 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7628ED61494176200DD3C34 /* MainMenu.xib */; };
+		C7CE8B2F14ABF87C00375FB3 /* JHJAMLSyntaxDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CE8B2E14ABF87C00375FB3 /* JHJAMLSyntaxDelegate.m */; };
 		C7E61EBE1495D636007AD899 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E61EBD1495D636007AD899 /* WebKit.framework */; };
 		C7E61EC11495E48E007AD899 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E61EC01495E48E007AD899 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
@@ -87,6 +88,8 @@
 		C7628ED11494176100DD3C34 /* JHDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHDocument.m; sourceTree = "<group>"; };
 		C7628ED41494176100DD3C34 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/JHDocument.xib; sourceTree = "<group>"; };
 		C7628ED71494176200DD3C34 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C7CE8B2D14ABF87C00375FB3 /* JHJAMLSyntaxDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHJAMLSyntaxDelegate.h; sourceTree = "<group>"; };
+		C7CE8B2E14ABF87C00375FB3 /* JHJAMLSyntaxDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHJAMLSyntaxDelegate.m; sourceTree = "<group>"; };
 		C7E61EBD1495D636007AD899 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		C7E61EC01495E48E007AD899 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -201,16 +204,15 @@
 		C7628EC41494176100DD3C34 /* jaml-editor */ = {
 			isa = PBXGroup;
 			children = (
-				C75842CA1495E9790017161B /* JHJAMLHTMLDelegate.h */,
-				C75842CB1495E9790017161B /* JHJAMLHTMLDelegate.m */,
-				C75842CC1495E9790017161B /* JHJAMLParser.h */,
-				C75842CD1495E9790017161B /* JHJAMLParser.m */,
-				C72DE14D14A00C4800E505D5 /* JHMulticastDelegate.h */,
-				C72DE14E14A00C4800E505D5 /* JHMulticastDelegate.m */,
+				C7CE8B2C14ABF83100375FB3 /* parser */,
 				C7628ED01494176100DD3C34 /* JHDocument.h */,
 				C7628ED11494176100DD3C34 /* JHDocument.m */,
+				C7CE8B2D14ABF87C00375FB3 /* JHJAMLSyntaxDelegate.h */,
+				C7CE8B2E14ABF87C00375FB3 /* JHJAMLSyntaxDelegate.m */,
 				C75842E81497EE970017161B /* JHJAMLEditorAppDelegate.h */,
 				C75842E91497EE970017161B /* JHJAMLEditorAppDelegate.m */,
+				C72DE14D14A00C4800E505D5 /* JHMulticastDelegate.h */,
+				C72DE14E14A00C4800E505D5 /* JHMulticastDelegate.m */,
 				C7628ED31494176100DD3C34 /* JHDocument.xib */,
 				C7628ED61494176200DD3C34 /* MainMenu.xib */,
 				C75842EB14984F790017161B /* PreferencePane */,
@@ -232,6 +234,17 @@
 				C7628ECD1494176100DD3C34 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C7CE8B2C14ABF83100375FB3 /* parser */ = {
+			isa = PBXGroup;
+			children = (
+				C75842CC1495E9790017161B /* JHJAMLParser.h */,
+				C75842CD1495E9790017161B /* JHJAMLParser.m */,
+				C75842CA1495E9790017161B /* JHJAMLHTMLDelegate.h */,
+				C75842CB1495E9790017161B /* JHJAMLHTMLDelegate.m */,
+			);
+			name = parser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +333,7 @@
 				C758430F149860390017161B /* NSString+BWAdditions.m in Sources */,
 				C7584310149860390017161B /* NSView+BWAdditions.m in Sources */,
 				C72DE14F14A00C4800E505D5 /* JHMulticastDelegate.m in Sources */,
+				C7CE8B2F14ABF87C00375FB3 /* JHJAMLSyntaxDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
