@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C72DE14F14A00C4800E505D5 /* JHMulticastDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C72DE14E14A00C4800E505D5 /* JHMulticastDelegate.m */; };
 		C75842CE1495E9790017161B /* JHJAMLHTMLDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C75842CB1495E9790017161B /* JHJAMLHTMLDelegate.m */; };
 		C75842CF1495E9790017161B /* JHJAMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C75842CD1495E9790017161B /* JHJAMLParser.m */; };
 		C75842D31497130C0017161B /* Clearness.css in Resources */ = {isa = PBXBuildFile; fileRef = C75842D11497130C0017161B /* Clearness.css */; };
@@ -37,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C72DE14D14A00C4800E505D5 /* JHMulticastDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JHMulticastDelegate.h; path = "../../jaml-parser/jaml-parser/JHMulticastDelegate.h"; sourceTree = "<group>"; };
+		C72DE14E14A00C4800E505D5 /* JHMulticastDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JHMulticastDelegate.m; path = "../../jaml-parser/jaml-parser/JHMulticastDelegate.m"; sourceTree = "<group>"; };
 		C75842CA1495E9790017161B /* JHJAMLHTMLDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JHJAMLHTMLDelegate.h; path = "../../jaml-parser/jaml-parser/JHJAMLHTMLDelegate.h"; sourceTree = "<group>"; };
 		C75842CB1495E9790017161B /* JHJAMLHTMLDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JHJAMLHTMLDelegate.m; path = "../../jaml-parser/jaml-parser/JHJAMLHTMLDelegate.m"; sourceTree = "<group>"; };
 		C75842CC1495E9790017161B /* JHJAMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JHJAMLParser.h; path = "../../jaml-parser/jaml-parser/JHJAMLParser.h"; sourceTree = "<group>"; };
@@ -202,6 +205,8 @@
 				C75842CB1495E9790017161B /* JHJAMLHTMLDelegate.m */,
 				C75842CC1495E9790017161B /* JHJAMLParser.h */,
 				C75842CD1495E9790017161B /* JHJAMLParser.m */,
+				C72DE14D14A00C4800E505D5 /* JHMulticastDelegate.h */,
+				C72DE14E14A00C4800E505D5 /* JHMulticastDelegate.m */,
 				C7628ED01494176100DD3C34 /* JHDocument.h */,
 				C7628ED11494176100DD3C34 /* JHDocument.m */,
 				C75842E81497EE970017161B /* JHJAMLEditorAppDelegate.h */,
@@ -314,6 +319,7 @@
 				C758430E149860390017161B /* NSImage+BWAdditions.m in Sources */,
 				C758430F149860390017161B /* NSString+BWAdditions.m in Sources */,
 				C7584310149860390017161B /* NSView+BWAdditions.m in Sources */,
+				C72DE14F14A00C4800E505D5 /* JHMulticastDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +420,7 @@
 				GCC_PREFIX_HEADER = "jaml-editor/jaml-editor-Prefix.pch";
 				INFOPLIST_FILE = "jaml-editor/jaml-editor-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -430,6 +437,7 @@
 				GCC_PREFIX_HEADER = "jaml-editor/jaml-editor-Prefix.pch";
 				INFOPLIST_FILE = "jaml-editor/jaml-editor-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

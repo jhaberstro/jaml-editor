@@ -12,17 +12,11 @@
 #import "JHJAMLHTMLDelegate.h"
 
 @interface JHDocument : NSDocument < NSTextDelegate >
-{
-    JHJAMLParser* _jamlParser;
-    NSTimer* _updateTimer;
-    NSDate* _lastEdit;
-    BOOL _dirty;
-    NSString* _temporaryFileContents;
-}
 
 - (NSString *)documentName;
-- (void)updateWebview;
-- (void)updateParagraphStyle;
+- (NSFont *)defaultFont;
+- (NSDictionary *)defaultAttributes;
+- (NSColor *)italicAndBoldColor;
 
 @property (strong) IBOutlet NSTextView *editorView;
 @property (strong) IBOutlet WebView *webView;
