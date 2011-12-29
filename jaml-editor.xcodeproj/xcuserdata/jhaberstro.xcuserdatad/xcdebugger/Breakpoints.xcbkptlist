@@ -9,11 +9,19 @@
          continueAfterRunningActions = "No"
          isPathRelative = "0"
          filePath = "/Users/jhaberstro/Personal-Projects/jaml/jaml-parser/jaml-parser/JHJAMLParser.m"
+<<<<<<< HEAD
          timestampString = "345957994.723394"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "636"
          endingLineNumber = "636"
+=======
+         timestampString = "346869672.402264"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "681"
+         endingLineNumber = "681"
+>>>>>>> syntax-highlighting
          landmarkName = "@implementation JHJAMLParser"
          landmarkType = "3">
       </FileBreakpoint>
@@ -23,6 +31,7 @@
          continueAfterRunningActions = "No"
          isPathRelative = "0"
          filePath = "/Users/jhaberstro/Personal-Projects/jaml/jaml-parser/jaml-parser/JHJAMLParser.m"
+<<<<<<< HEAD
          timestampString = "345957994.723394"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
@@ -87,5 +96,15 @@
          landmarkName = "-_annotateTokens:"
          landmarkType = "5">
       </FileBreakpoint>
+=======
+         timestampString = "346869501.552279"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "236"
+         endingLineNumber = "236"
+         landmarkName = "-_tokenize:"
+         landmarkType = "5">
+      </FileBreakpoint>
+>>>>>>> syntax-highlighting
    </FileBreakpoints>
 </Bucket>
