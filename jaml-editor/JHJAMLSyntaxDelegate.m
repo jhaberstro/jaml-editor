@@ -9,6 +9,17 @@
 #import "JHJAMLSyntaxDelegate.h"
 #import "JHDocument.h"
 
+@interface NSDictionary (SyntaxColorData)
+- (NSColor *)syntaxColorForKey:(NSString *)key;
+@end
+
+@implementation NSDictionary (SyntaxColorData)
+- (NSColor *)syntaxColorForKey:(NSString *)key
+{
+    return [NSKeyedUnarchiver unarchiveObjectWithData:[self objectForKey:key]];
+}
+@end
+
 enum {
     JHJAMLSyntaxAttributeItalic = 1 << 0,
     JHJAMLSyntaxAttributeBold = 1 << 1,
@@ -19,7 +30,7 @@ enum {
 };
 typedef NSUInteger JHJAMLSyntaxAttribute;
 
-static NSDictionary* AttributesDictionary(JHDocument* doc, NSFont* sourceFont, JHJAMLSyntaxAttribute attributes) {
+static NSDictionary* AttributesDictionary(NSDictionary* colors, NSFont* sourceFont, JHJAMLSyntaxAttribute attributes) {
     NSMutableDictionary* dictionary = [NSMutableDictionary dictionary];
     BOOL bold = attributes & JHJAMLSyntaxAttributeBold;
     BOOL italic = attributes & JHJAMLSyntaxAttributeItalic;
@@ -37,11 +48,12 @@ static NSDictionary* AttributesDictionary(JHDocument* doc, NSFont* sourceFont, J
     
     // The order of the branches defines the precedence
     void (^SetColor) (NSColor*) = ^(NSColor *color) {[dictionary setObject:color forKey:NSForegroundColorAttributeName];};
-    if (inlineCode)             SetColor([NSColor greenColor]);
-    else if (link)              SetColor([NSColor purpleColor]);
-    else if (bold || italic)    SetColor([doc italicAndBoldColor]);
-    else if (list)              SetColor([NSColor blueColor]);
-    else if (header)            SetColor([NSColor magentaColor]);
+    if (inlineCode)             SetColor([colors syntaxColorForKey:@"inlineCodeColor"]);
+    else if (link)              SetColor([colors syntaxColorForKey:@"linkColor"]);
+    else if (bold)              SetColor([colors syntaxColorForKey:@"boldColor"]);
+    else if (italic)            SetColor([colors syntaxColorForKey:@"italicColor"]);
+    else if (list)              SetColor([colors syntaxColorForKey:@"listColor"]);
+    else if (header)            SetColor([colors syntaxColorForKey:@"headerColor"]);
     else                        SetColor([NSColor textColor]);
     
     return dictionary;
@@ -50,15 +62,18 @@ static NSDictionary* AttributesDictionary(JHDocument* doc, NSFont* sourceFont, J
 @implementation JHJAMLSyntaxDelegate
 {
     JHJAMLSyntaxAttribute _attributes;
+    NSUserDefaultsController* _userDefaultsController;
 }
 
 @synthesize textStorage = _textStorage;
-@synthesize document = _document;
+@synthesize colors = _colors;
+@synthesize font = _font;
 
 - (id)init
 {
     if (self = [super init]) {
         _attributes = 0;
+        _userDefaultsController = [NSUserDefaultsController sharedUserDefaultsController];
     }
     
     return self;
@@ -66,7 +81,7 @@ static NSDictionary* AttributesDictionary(JHDocument* doc, NSFont* sourceFont, J
 
 - (void)_highlightWholeAttribute:(JHJAMLSyntaxAttribute)attribute infoDict:(NSDictionary *)infoDict
 {
-    NSDictionary* attributes = AttributesDictionary(self.document, [self.document defaultFont], _attributes | attribute);
+    NSDictionary* attributes = AttributesDictionary(self.colors, self.font, _attributes | attribute);
     NSRange range = [[infoDict objectForKey:JHElementRange] rangeValue];
     [self.textStorage addAttributes:attributes range:range];
 }
@@ -96,7 +111,7 @@ static NSDictionary* AttributesDictionary(JHDocument* doc, NSFont* sourceFont, J
         case JHStrongElement:
         case JHEmphasizeElement: {
             _attributes |= (element == JHStrongElement ? JHJAMLSyntaxAttributeBold : JHJAMLSyntaxAttributeItalic);
-            NSDictionary* attributes = AttributesDictionary(self.document, [self.document defaultFont], _attributes);            
+            NSDictionary* attributes = AttributesDictionary(self.colors, self.font, _attributes);            
             NSRange range = NSMakeRange([[info objectForKey:JHElementLocation] unsignedIntegerValue], 1);
             [self.textStorage addAttributes:attributes range:range];
             break;
@@ -104,14 +119,14 @@ static NSDictionary* AttributesDictionary(JHDocument* doc, NSFont* sourceFont, J
             
         case JHHeaderElement: {
             _attributes |= JHJAMLSyntaxAttributeHeader;
-            NSDictionary* attributes = AttributesDictionary(self.document, [self.document defaultFont], _attributes);            
+            NSDictionary* attributes = AttributesDictionary(self.colors, self.font, _attributes);            
             NSRange range = NSMakeRange([[info objectForKey:JHElementLocation] unsignedIntegerValue], [[info objectForKey:JHHeaderStrength] unsignedIntegerValue]);
             [self.textStorage addAttributes:attributes range:range];
             break;
         }
             
         case JHListItemElement: {
-            NSDictionary* attributes = AttributesDictionary(self.document, [self.document defaultFont], _attributes | JHJAMLSyntaxAttributeList);
+            NSDictionary* attributes = AttributesDictionary(self.colors, self.font, _attributes | JHJAMLSyntaxAttributeList);
             NSRange range = [[info objectForKey:JHElementRange] rangeValue];
             [self.textStorage addAttributes:attributes range:range];
             break;
@@ -126,7 +141,7 @@ static NSDictionary* AttributesDictionary(JHDocument* doc, NSFont* sourceFont, J
     switch (element) {
         case JHStrongElement:
         case JHEmphasizeElement: {            
-            NSDictionary* attributes = AttributesDictionary(self.document, [self.document defaultFont], _attributes);            
+            NSDictionary* attributes = AttributesDictionary(self.colors, self.font, _attributes);            
             NSRange range = NSMakeRange([[info objectForKey:JHElementLocation] unsignedIntegerValue], 1);
             [self.textStorage addAttributes:attributes range:range];
             _attributes &= ~(element == JHStrongElement ? JHJAMLSyntaxAttributeBold : JHJAMLSyntaxAttributeItalic);

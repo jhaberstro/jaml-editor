@@ -8,6 +8,9 @@
 
 #import "JHDocument.h"
 #import "JHJAMLSyntaxDelegate.h"
+#import "ThemePreferenceViewController.h"
+#import "JHPreferencePaneWindowController.h"
+#import "JHJAMLEditorAppDelegate.h"
 
 @interface JHDocument ()
 - (void)_forceWebviewRefresh;
@@ -27,6 +30,14 @@
     self = [super init];
     if (self) {
         _jamlParser = [[JHJAMLParser alloc] init];
+        [[NSNotificationCenter defaultCenter] addObserverForName:@"JHNotificationFontChanged"
+                                                          object:nil
+                                                           queue:[[NSOperationQueue alloc] init]
+                                                      usingBlock:[^(NSNotification* note) {
+            dispatch_async(dispatch_get_main_queue(), [^{
+                [self _forceWebviewRefresh];
+            } copy]);
+        } copy]];
     }
     
     return self;
@@ -41,11 +52,10 @@
     
     NSFont* font = [NSFont fontWithName:@"Menlo" size:12.0];
     [self.editorView setFont:font];
+    [self.editorView setTextContainerInset:NSMakeSize(8.0, 0.0)];
 }
 
 - (NSString *)windowNibName {
-    // Override returning the nib file name of the document
-    // If you need to use a subclass of NSWindowController or if your document supports multiple NSWindowControllers, you should remove this method and override -makeWindowControllers instead.
     return @"JHDocument";
 }
 
@@ -81,14 +91,14 @@
     
     JHJAMLSyntaxDelegate* syntaxDelegate = [[JHJAMLSyntaxDelegate alloc] init];
     syntaxDelegate.textStorage = self.editorView.textStorage;
-    syntaxDelegate.document = self;
+    syntaxDelegate.colors = [[[[NSApp delegate] preferenceWindowController] themeController] selectedTheme];
+    syntaxDelegate.font = [self defaultFont];
     JHJAMLHTMLDelegate* htmlDelegate = [[JHJAMLHTMLDelegate alloc] init];
     [_jamlParser.delegates addDelegate:syntaxDelegate];
     [_jamlParser.delegates addDelegate:htmlDelegate];
     [_jamlParser parseJAML:self.editorView.string];
     NSArray* cssFiles = [[NSBundle mainBundle] URLsForResourcesWithExtension:@"css" subdirectory:@""];
     NSString* html = [NSString stringWithFormat:@"<head><link rel=\"stylesheet\" href=\"%@\"></head><body>%@</body>", [[cssFiles objectAtIndex:0] absoluteString], htmlDelegate.html];
-    //printf("%s\n\n", [html UTF8String]);
     [[self.webView mainFrame] loadHTMLString:html baseURL:nil];
     [_jamlParser.delegates removeDelegate:syntaxDelegate];
     [_jamlParser.delegates removeDelegate:htmlDelegate];
@@ -106,7 +116,7 @@
 }
 
 - (NSFont *)defaultFont {
-    return [NSFont fontWithName:@"Menlo" size:12.0];
+    return [NSUnarchiver unarchiveObjectWithData:[[NSUserDefaults standardUserDefaults] objectForKey:@"font"]];
 }
 
 - (NSDictionary *)defaultAttributes {

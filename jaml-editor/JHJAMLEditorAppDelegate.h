@@ -8,11 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class ThemePreferenceViewController;
+@class JHPreferencePaneWindowController;
 @interface JHJAMLEditorAppDelegate : NSObject < NSApplicationDelegate >
 
 - (IBAction)openPreferences:(id)sender;
 - (IBAction)exportCurrentDocumentToPDF:(id)sender;
 
-@property (nonatomic, strong) NSWindowController *preferenceWindowController;
+@property (nonatomic, strong) JHPreferencePaneWindowController *preferenceWindowController;
 
 @end

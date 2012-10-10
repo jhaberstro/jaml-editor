@@ -1,0 +1,3 @@
+[submodule "external/jaml-parser"]
+	path = external/jaml-parser
+	url = https://github.com/jhaberstro/jaml-parser.git

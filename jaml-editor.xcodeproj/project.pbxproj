@@ -8,15 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		C72DE14F14A00C4800E505D5 /* JHMulticastDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C72DE14E14A00C4800E505D5 /* JHMulticastDelegate.m */; };
-		C75842CE1495E9790017161B /* JHJAMLHTMLDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C75842CB1495E9790017161B /* JHJAMLHTMLDelegate.m */; };
-		C75842CF1495E9790017161B /* JHJAMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C75842CD1495E9790017161B /* JHJAMLParser.m */; };
 		C75842D31497130C0017161B /* Clearness.css in Resources */ = {isa = PBXBuildFile; fileRef = C75842D11497130C0017161B /* Clearness.css */; };
 		C75842D41497130C0017161B /* GitHub.css in Resources */ = {isa = PBXBuildFile; fileRef = C75842D21497130C0017161B /* GitHub.css */; };
 		C75842E61497EE500017161B /* MASPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C75842E31497EE500017161B /* MASPreferencesWindow.xib */; };
 		C75842E71497EE500017161B /* MASPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C75842E51497EE500017161B /* MASPreferencesWindowController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C75842EA1497EE970017161B /* JHJAMLEditorAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C75842E91497EE970017161B /* JHJAMLEditorAppDelegate.m */; };
-		C75842EF149851500017161B /* CSSPreferenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C75842ED149851500017161B /* CSSPreferenceViewController.m */; };
-		C75842F0149851500017161B /* CSSPreferenceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C75842EE149851500017161B /* CSSPreferenceViewController.xib */; };
+		C75842EF149851500017161B /* ThemePreferenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C75842ED149851500017161B /* ThemePreferenceViewController.m */; };
+		C75842F0149851500017161B /* ThemePreferenceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C75842EE149851500017161B /* ThemePreferenceViewController.xib */; };
 		C7584308149860390017161B /* BWAnchoredButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C75842F7149860390017161B /* BWAnchoredButton.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C7584309149860390017161B /* BWAnchoredButtonBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C75842F9149860390017161B /* BWAnchoredButtonBar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C758430A149860390017161B /* BWAnchoredButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C75842FB149860390017161B /* BWAnchoredButtonCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -26,6 +24,7 @@
 		C758430E149860390017161B /* NSImage+BWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7584303149860390017161B /* NSImage+BWAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C758430F149860390017161B /* NSString+BWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7584305149860390017161B /* NSString+BWAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C7584310149860390017161B /* NSView+BWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7584307149860390017161B /* NSView+BWAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C75AF60114B2AF87009A7BA0 /* JHPreferencePaneWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C75AF60014B2AF87009A7BA0 /* JHPreferencePaneWindowController.m */; };
 		C7628EBF1494176100DD3C34 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7628EBE1494176100DD3C34 /* Cocoa.framework */; };
 		C7628EC91494176100DD3C34 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7628EC71494176100DD3C34 /* InfoPlist.strings */; };
 		C7628ECB1494176100DD3C34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7628ECA1494176100DD3C34 /* main.m */; };
@@ -34,17 +33,54 @@
 		C7628ED51494176100DD3C34 /* JHDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7628ED31494176100DD3C34 /* JHDocument.xib */; };
 		C7628ED81494176200DD3C34 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7628ED61494176200DD3C34 /* MainMenu.xib */; };
 		C7CE8B2F14ABF87C00375FB3 /* JHJAMLSyntaxDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CE8B2E14ABF87C00375FB3 /* JHJAMLSyntaxDelegate.m */; };
+		C7E09AA814B273BE0024B51B /* Add.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C7E09AA614B273BE0024B51B /* Add.tiff */; };
+		C7E09AA914B273BE0024B51B /* Remove.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C7E09AA714B273BE0024B51B /* Remove.tiff */; };
+		C7E49AF91625006900C01B83 /* JAMLParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E49AF51625005000C01B83 /* JAMLParser.framework */; };
+		C7E49AFC162500C000C01B83 /* JAMLParser.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C7E49AF51625005000C01B83 /* JAMLParser.framework */; };
 		C7E61EBE1495D636007AD899 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E61EBD1495D636007AD899 /* WebKit.framework */; };
 		C7E61EC11495E48E007AD899 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E61EC01495E48E007AD899 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C7E49AB41624FE6500C01B83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7E49AAC1624FE6500C01B83 /* jaml-parser.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C7628E691492EB7000DD3C34;
+			remoteInfo = "jaml-parser";
+		};
+		C7E49AF41625005000C01B83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7E49AAC1624FE6500C01B83 /* jaml-parser.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C7E49AD01624FF7900C01B83;
+			remoteInfo = JAMLParser;
+		};
+		C7E49AF71625005900C01B83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7E49AAC1624FE6500C01B83 /* jaml-parser.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C7E49ACF1624FF7900C01B83;
+			remoteInfo = JAMLParser;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C7E49AFA162500A800C01B83 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C7E49AFC162500C000C01B83 /* JAMLParser.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		C72DE14D14A00C4800E505D5 /* JHMulticastDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JHMulticastDelegate.h; path = "../../jaml-parser/jaml-parser/JHMulticastDelegate.h"; sourceTree = "<group>"; };
 		C72DE14E14A00C4800E505D5 /* JHMulticastDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JHMulticastDelegate.m; path = "../../jaml-parser/jaml-parser/JHMulticastDelegate.m"; sourceTree = "<group>"; };
-		C75842CA1495E9790017161B /* JHJAMLHTMLDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JHJAMLHTMLDelegate.h; path = "../../jaml-parser/jaml-parser/JHJAMLHTMLDelegate.h"; sourceTree = "<group>"; };
-		C75842CB1495E9790017161B /* JHJAMLHTMLDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JHJAMLHTMLDelegate.m; path = "../../jaml-parser/jaml-parser/JHJAMLHTMLDelegate.m"; sourceTree = "<group>"; };
-		C75842CC1495E9790017161B /* JHJAMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JHJAMLParser.h; path = "../../jaml-parser/jaml-parser/JHJAMLParser.h"; sourceTree = "<group>"; };
-		C75842CD1495E9790017161B /* JHJAMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JHJAMLParser.m; path = "../../jaml-parser/jaml-parser/JHJAMLParser.m"; sourceTree = "<group>"; };
 		C75842D11497130C0017161B /* Clearness.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = Clearness.css; sourceTree = "<group>"; };
 		C75842D21497130C0017161B /* GitHub.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = GitHub.css; sourceTree = "<group>"; };
 		C75842E21497EE500017161B /* MASPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferencesViewController.h; sourceTree = "<group>"; };
@@ -53,9 +89,9 @@
 		C75842E51497EE500017161B /* MASPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASPreferencesWindowController.m; sourceTree = "<group>"; };
 		C75842E81497EE970017161B /* JHJAMLEditorAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHJAMLEditorAppDelegate.h; sourceTree = "<group>"; };
 		C75842E91497EE970017161B /* JHJAMLEditorAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHJAMLEditorAppDelegate.m; sourceTree = "<group>"; };
-		C75842EC149851500017161B /* CSSPreferenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSPreferenceViewController.h; sourceTree = "<group>"; };
-		C75842ED149851500017161B /* CSSPreferenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSPreferenceViewController.m; sourceTree = "<group>"; };
-		C75842EE149851500017161B /* CSSPreferenceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSSPreferenceViewController.xib; sourceTree = "<group>"; };
+		C75842EC149851500017161B /* ThemePreferenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemePreferenceViewController.h; sourceTree = "<group>"; };
+		C75842ED149851500017161B /* ThemePreferenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemePreferenceViewController.m; sourceTree = "<group>"; };
+		C75842EE149851500017161B /* ThemePreferenceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThemePreferenceViewController.xib; sourceTree = "<group>"; };
 		C75842F6149860390017161B /* BWAnchoredButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWAnchoredButton.h; sourceTree = "<group>"; };
 		C75842F7149860390017161B /* BWAnchoredButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWAnchoredButton.m; sourceTree = "<group>"; };
 		C75842F8149860390017161B /* BWAnchoredButtonBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWAnchoredButtonBar.h; sourceTree = "<group>"; };
@@ -74,6 +110,8 @@
 		C7584305149860390017161B /* NSString+BWAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BWAdditions.m"; sourceTree = "<group>"; };
 		C7584306149860390017161B /* NSView+BWAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+BWAdditions.h"; sourceTree = "<group>"; };
 		C7584307149860390017161B /* NSView+BWAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+BWAdditions.m"; sourceTree = "<group>"; };
+		C75AF5FF14B2AF87009A7BA0 /* JHPreferencePaneWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHPreferencePaneWindowController.h; sourceTree = "<group>"; };
+		C75AF60014B2AF87009A7BA0 /* JHPreferencePaneWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHPreferencePaneWindowController.m; sourceTree = "<group>"; };
 		C7628EBA1494176100DD3C34 /* jaml-editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "jaml-editor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7628EBE1494176100DD3C34 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		C7628EC11494176100DD3C34 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -90,6 +128,9 @@
 		C7628ED71494176200DD3C34 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		C7CE8B2D14ABF87C00375FB3 /* JHJAMLSyntaxDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHJAMLSyntaxDelegate.h; sourceTree = "<group>"; };
 		C7CE8B2E14ABF87C00375FB3 /* JHJAMLSyntaxDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHJAMLSyntaxDelegate.m; sourceTree = "<group>"; };
+		C7E09AA614B273BE0024B51B /* Add.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Add.tiff; sourceTree = "<group>"; };
+		C7E09AA714B273BE0024B51B /* Remove.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Remove.tiff; sourceTree = "<group>"; };
+		C7E49AAC1624FE6500C01B83 /* jaml-parser.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "jaml-parser.xcodeproj"; path = "external/jaml-parser/jaml-parser.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		C7E61EBD1495D636007AD899 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		C7E61EC01495E48E007AD899 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -99,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7E49AF91625006900C01B83 /* JAMLParser.framework in Frameworks */,
 				C7E61EC11495E48E007AD899 /* QuartzCore.framework in Frameworks */,
 				C7E61EBE1495D636007AD899 /* WebKit.framework in Frameworks */,
 				C7628EBF1494176100DD3C34 /* Cocoa.framework in Frameworks */,
@@ -131,9 +173,11 @@
 		C75842EB14984F790017161B /* PreferencePane */ = {
 			isa = PBXGroup;
 			children = (
-				C75842EC149851500017161B /* CSSPreferenceViewController.h */,
-				C75842ED149851500017161B /* CSSPreferenceViewController.m */,
-				C75842EE149851500017161B /* CSSPreferenceViewController.xib */,
+				C75842EC149851500017161B /* ThemePreferenceViewController.h */,
+				C75842ED149851500017161B /* ThemePreferenceViewController.m */,
+				C75842EE149851500017161B /* ThemePreferenceViewController.xib */,
+				C75AF5FF14B2AF87009A7BA0 /* JHPreferencePaneWindowController.h */,
+				C75AF60014B2AF87009A7BA0 /* JHPreferencePaneWindowController.m */,
 			);
 			path = PreferencePane;
 			sourceTree = "<group>";
@@ -204,7 +248,7 @@
 		C7628EC41494176100DD3C34 /* jaml-editor */ = {
 			isa = PBXGroup;
 			children = (
-				C7CE8B2C14ABF83100375FB3 /* parser */,
+				C7E49AAC1624FE6500C01B83 /* jaml-parser.xcodeproj */,
 				C7628ED01494176100DD3C34 /* JHDocument.h */,
 				C7628ED11494176100DD3C34 /* JHDocument.m */,
 				C7CE8B2D14ABF87C00375FB3 /* JHJAMLSyntaxDelegate.h */,
@@ -219,6 +263,7 @@
 				C75842F5149860390017161B /* BWToolkit */,
 				C75842E11497EE4F0017161B /* MASPreferences */,
 				C75842D01497130C0017161B /* css */,
+				C7E09AA514B273BE0024B51B /* Resources */,
 				C7628EC51494176100DD3C34 /* Supporting Files */,
 			);
 			path = "jaml-editor";
@@ -236,15 +281,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C7CE8B2C14ABF83100375FB3 /* parser */ = {
+		C7E09AA514B273BE0024B51B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C75842CC1495E9790017161B /* JHJAMLParser.h */,
-				C75842CD1495E9790017161B /* JHJAMLParser.m */,
-				C75842CA1495E9790017161B /* JHJAMLHTMLDelegate.h */,
-				C75842CB1495E9790017161B /* JHJAMLHTMLDelegate.m */,
+				C7E09AA614B273BE0024B51B /* Add.tiff */,
+				C7E09AA714B273BE0024B51B /* Remove.tiff */,
 			);
-			name = parser;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C7E49AAD1624FE6500C01B83 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7E49AB51624FE6500C01B83 /* jaml-parser */,
+				C7E49AF51625005000C01B83 /* JAMLParser.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,10 +309,12 @@
 				C7628EB61494176100DD3C34 /* Sources */,
 				C7628EB71494176100DD3C34 /* Frameworks */,
 				C7628EB81494176100DD3C34 /* Resources */,
+				C7E49AFA162500A800C01B83 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C7E49AF81625005900C01B83 /* PBXTargetDependency */,
 			);
 			name = "jaml-editor";
 			productName = "jaml-editor";
@@ -286,12 +340,35 @@
 			mainGroup = C7628EAF1494176100DD3C34;
 			productRefGroup = C7628EBB1494176100DD3C34 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C7E49AAD1624FE6500C01B83 /* Products */;
+					ProjectRef = C7E49AAC1624FE6500C01B83 /* jaml-parser.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C7628EB91494176100DD3C34 /* jaml-editor */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C7E49AB51624FE6500C01B83 /* jaml-parser */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "jaml-parser";
+			remoteRef = C7E49AB41624FE6500C01B83 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C7E49AF51625005000C01B83 /* JAMLParser.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JAMLParser.framework;
+			remoteRef = C7E49AF41625005000C01B83 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C7628EB81494176100DD3C34 /* Resources */ = {
@@ -305,7 +382,9 @@
 				C75842D31497130C0017161B /* Clearness.css in Resources */,
 				C75842D41497130C0017161B /* GitHub.css in Resources */,
 				C75842E61497EE500017161B /* MASPreferencesWindow.xib in Resources */,
-				C75842F0149851500017161B /* CSSPreferenceViewController.xib in Resources */,
+				C75842F0149851500017161B /* ThemePreferenceViewController.xib in Resources */,
+				C7E09AA814B273BE0024B51B /* Add.tiff in Resources */,
+				C7E09AA914B273BE0024B51B /* Remove.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,11 +397,9 @@
 			files = (
 				C7628ECB1494176100DD3C34 /* main.m in Sources */,
 				C7628ED21494176100DD3C34 /* JHDocument.m in Sources */,
-				C75842CE1495E9790017161B /* JHJAMLHTMLDelegate.m in Sources */,
-				C75842CF1495E9790017161B /* JHJAMLParser.m in Sources */,
 				C75842E71497EE500017161B /* MASPreferencesWindowController.m in Sources */,
 				C75842EA1497EE970017161B /* JHJAMLEditorAppDelegate.m in Sources */,
-				C75842EF149851500017161B /* CSSPreferenceViewController.m in Sources */,
+				C75842EF149851500017161B /* ThemePreferenceViewController.m in Sources */,
 				C7584308149860390017161B /* BWAnchoredButton.m in Sources */,
 				C7584309149860390017161B /* BWAnchoredButtonBar.m in Sources */,
 				C758430A149860390017161B /* BWAnchoredButtonCell.m in Sources */,
@@ -334,10 +411,19 @@
 				C7584310149860390017161B /* NSView+BWAdditions.m in Sources */,
 				C72DE14F14A00C4800E505D5 /* JHMulticastDelegate.m in Sources */,
 				C7CE8B2F14ABF87C00375FB3 /* JHJAMLSyntaxDelegate.m in Sources */,
+				C75AF60114B2AF87009A7BA0 /* JHPreferencePaneWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C7E49AF81625005900C01B83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JAMLParser;
+			targetProxy = C7E49AF71625005900C01B83 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C7628EC71494176100DD3C34 /* InfoPlist.strings */ = {

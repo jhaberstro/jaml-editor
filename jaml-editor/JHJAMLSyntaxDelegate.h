@@ -20,5 +20,7 @@
 - (void)didEndElement:(JHElement)element info:(NSDictionary *)info;
 
 @property (weak) NSTextStorage* textStorage;
-@property (weak) JHDocument* document;
+@property (weak) NSDictionary* colors;
+@property (strong) NSFont* font;
+
 @end
